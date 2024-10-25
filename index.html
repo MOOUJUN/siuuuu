@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo com Efeito de Hover</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Fundo preto */
+            color: white; /* Texto branco */
+            text-align: center; /* Centraliza o texto */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+            position: relative; /* Necessário para posicionar o copyright */
+        }
+        .container {
+            max-width: 400px; /* Limita a largura do container */
+            width: 100%; /* Ajusta a largura do container */
+            position: relative; /* Necessário para o posicionamento absoluto do título */
+        }
+        .img-container {
+            position: relative; /* Para posicionar a mensagem em relação à imagem */
+            display: inline-block; /* Permite aplicar o efeito de borda em volta da imagem */
+            border-radius: 50%; /* Faz a borda em volta da imagem redonda */
+            padding: 5px; /* Espaço entre a borda colorida e a imagem */
+            animation: rainbow 3s linear infinite; /* Efeito de animação de arco-íris */
+        }
+        @keyframes rainbow {
+            0% { border: 5px solid red; }
+            14% { border: 5px solid orange; }
+            28% { border: 5px solid yellow; }
+            42% { border: 5px solid green; }
+            57% { border: 5px solid blue; }
+            71% { border: 5px solid indigo; }
+            85% { border: 5px solid violet; }
+            100% { border: 5px solid red; }
+        }
+        img {
+            width: 150px; /* Largura da imagem */
+            height: 150px; /* Altura da imagem */
+            border-radius: 50%; /* Faz a imagem redonda */
+            display: block; /* Remove o espaço abaixo da imagem */
+            margin: 0 auto; /* Centraliza a imagem */
+        }
+        .tooltip {
+            position: absolute; /* Posiciona a mensagem em relação à imagem */
+            bottom: 100%; /* Coloca a mensagem acima da imagem */
+            left: 50%; /* Centraliza a mensagem horizontalmente */
+            transform: translateX(-50%); /* Ajusta o alinhamento */
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo da mensagem */
+            color: white; /* Cor do texto */
+            padding: 10px; /* Espaço interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            visibility: hidden; /* Inicialmente escondida */
+            opacity: 0; /* Inicialmente transparente */
+            transition: visibility 0s, opacity 0.3s linear; /* Transição suave */
+            width: 200px; /* Largura da mensagem */
+            font-size: 18px; /* Tamanho da fonte da mensagem */
+        }
+        .img-container:hover .tooltip {
+            visibility: visible; /* Mostra a mensagem ao passar o mouse */
+            opacity: 1; /* Torna a mensagem visível */
+        }
+        .piscando {
+            font-size: 24px; /* Tamanho da fonte dos textos */
+            margin: 10px 0; /* Espaço entre os textos */
+            animation: piscar 1s infinite; /* Efeito de piscar */
+        }
+        @keyframes piscar {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .copyright {
+            margin-top: 20px; /* Espaço acima do copyright */
+            font-size: 12px; /* Tamanho da fonte do copyright */
+            position: absolute; /* Posiciona no rodapé */
+            bottom: 10px; /* Distância do fundo */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta a posição */
+        }
+        .servicos {
+            position: absolute; /* Para posicionar acima da imagem */
+            top: -40px; /* Distância da parte superior */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta o alinhamento */
+            font-size: 28px; /* Tamanho da fonte */
+            color: yellow; /* Cor do texto */
+            padding: 5px 10px; /* Espaçamento interno */
+            border: 2px solid yellow; /* Borda amarela */
+            border-radius: 5px; /* Bordas arredondadas */
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+        .servicos:hover {
+            text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a class="servicos" href="serviços.html">SERVIÇOS</a> <!-- Link para a página de serviços -->
+   <br>  <br> <br> <br><div class="img-container">
+        <img src="https://pbs.twimg.com/ext_tw_video_thumb/1660361547829465092/pu/img/JCcsA6snStobCyfA.jpg" alt="Imagem descritiva">
+        <div class="tooltip">EI, VOCE MESMO, SUA MÂE FOI ABUSADA</div>
+    </div>
+    <div class="piscando">Já roubei + de 1k</div>
+    <div class="piscando">Roubei 4,800 de uma criança</div>
+    <div class="piscando">Derrubei o site do PT, com ataques DDoS</div>
+    <div class="piscando">Desde 2022 roubando contas box fruits, totalizando mais de 400,lucro+3k</div>
+    <div class="piscando">73GB.</div>
+    <div class="piscando">Usei o PC da lan house para realizar um ataque DDoS; meses depois, a empresa foi processada e fechada</div>
+    
+    >
+</div>
+
+<div class="copyright">
+    &copy; 2024 Nunca_estive_AQUI. Todos os direitos reservados.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Fundo preto */
+            color: white; /* Texto branco */
+            text-align: center; /* Centraliza o texto */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+        }
+        .container {
+            max-width: 600px; /* Limita a largura do container */
+            width: 100%; /* Ajusta a largura do container */
+            position: relative; /* Necessário para o posicionamento absoluto do copyright */
+        }
+        .img-container {
+            position: relative; /* Para posicionar a mensagem em relação à imagem */
+            display: inline-block; /* Permite aplicar o efeito de borda em volta da imagem */
+            border-radius: 50%; /* Faz a borda em volta da imagem redonda */
+            padding: 5px; /* Espaço entre a borda colorida e a imagem */
+            animation: rainbow 3s linear infinite; /* Efeito de animação de arco-íris */
+        }
+        @keyframes rainbow {
+            0% { border: 5px solid red; }
+            14% { border: 5px solid orange; }
+            28% { border: 5px solid yellow; }
+            42% { border: 5px solid green; }
+            57% { border: 5px solid blue; }
+            71% { border: 5px solid indigo; }
+            85% { border: 5px solid violet; }
+            100% { border: 5px solid red; }
+        }
+        img {
+            width: 150px; /* Largura da imagem */
+            height: 150px; /* Altura da imagem */
+            border-radius: 50%; /* Faz a imagem redonda */
+            display: block; /* Remove o espaço abaixo da imagem */
+            margin: 0 auto; /* Centraliza a imagem */
+        }
+        .servico {
+            margin: 20px 0; /* Espaçamento entre os serviços */
+            padding: 10px; /* Espaço interno */
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+            border-radius: 10px; /* Bordas arredondadas */
+            transition: transform 0.3s, background-color 0.3s; /* Transição suave */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+            position: relative; /* Para posicionar o texto maior */
+        }
+        .servico:hover {
+            transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+            background-color: rgba(255, 255, 255, 0.2); /* Muda a cor do fundo ao passar o mouse */
+        }
+        .texto-maior {
+            position: absolute; /* Posiciona o texto maior */
+            bottom: -40px; /* Ajusta a posição abaixo do serviço */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta o alinhamento */
+            background-color: yellow; /* Fundo amarelo */
+            color: black; /* Texto preto */
+            padding: 10px; /* Espaço interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            visibility: hidden; /* Inicialmente escondido */
+            opacity: 0; /* Inicialmente transparente */
+            transition: visibility 0s, opacity 0.3s linear; /* Transição suave */
+            width: 250px; /* Largura do texto maior */
+            font-size: 16px; /* Tamanho da fonte do texto maior */
+        }
+        .servico:hover .texto-maior {
+            visibility: visible; /* Mostra o texto maior ao passar o mouse */
+            opacity: 1; /* Torna o texto maior visível */
+        }
+        .copyright {
+            margin-top: 20px; /* Espaço acima do copyright */
+            font-size: 12px; /* Tamanho da fonte do copyright */
+            position: absolute; /* Posiciona no rodapé */
+            bottom: 10px; /* Distância do fundo */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta a posição */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="img-container">
+        <img src="https://cdns-images.dzcdn.net/images/cover/5a61987bc087bafb073b33317ed406c4/0x1900-000000-80-0-0.jpg" alt="Imagem de Serviços">
+    </div>
+
+    <div class="servico">
+        ATACK DDOS (R$ 20,00)
+        <div class="texto-maior">DERRUBAREMOS QUAL QUER SITE, EM MINUTOS</div>
+    </div>
+
+    <div class="servico">
+        SITE PHISING (R$ 40,00)
+        <div class="texto-maior">CRIAREMOS QUAL QUER SITE QUE TENHA LOGIN SEJA ELE FAMOSO OU NAO</div>
+    </div>
+
+    <div class="servico">
+        PUXAR DADOS ATUALIZADO 25/10/2024 03:53 (R$ 10,00)
+        <div class="texto-maior">PARA PUXAR DADOS, PRECISARÁ, CPF OU NOME COMPLETO</div>
+    </div>
+
+    <div class="servico">
+        20 GB C... (R$ 100,00)
+        <div class="texto-maior">NÔS CHAME NO PV</div>
+    </div>
+
+    <div class="servico">
+        CLONAR CARTAO DA SUA MÂE ( R$ 100,00)
+        <div class="texto-maior">ISSO MESMO</div>
+    </div>
+</div>
+<div class="servico">
+    CONTATO (Discord amarelo90km)
+    <div class="texto-maior">ISSO MESMO</div>
+</div>
+</div>
+
+<div class="copyright">
+    &copy; 2024 Nunca_estive_AQUI. Todos os direitos reservados.
+</div>
+
+</body>
+</html>
